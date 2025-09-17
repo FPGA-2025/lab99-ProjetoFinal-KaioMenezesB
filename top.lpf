@@ -1,0 +1,35 @@
+LOCATE COMP "sys_clk" SITE "P3";   IOBUF PORT "sys_clk" IO_TYPE=LVCMOS33;
+LOCATE COMP "SDA" SITE "G3";       IOBUF PORT "SDA" IO_TYPE=LVCMOS33;
+LOCATE COMP "SCL" SITE "F3";       IOBUF PORT "SCL" IO_TYPE=LVCMOS33;
+LOCATE COMP "led_o" SITE "L2";     IOBUF PORT "led_o" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "servo_o" SITE "K3"; IOBUF PORT "servo_o" IO_TYPE=LVCMOS33;
+
+# Linhas
+LOCATE COMP "keypad_rows_o[0]" SITE "N3"; IOBUF PORT "keypad_rows_o[0]" IO_TYPE=LVCMOS33; // Linha 1
+LOCATE COMP "keypad_rows_o[1]" SITE "M1"; IOBUF PORT "keypad_rows_o[1]" IO_TYPE=LVCMOS33; // Linha 2
+LOCATE COMP "keypad_rows_o[2]" SITE "N2"; IOBUF PORT "keypad_rows_o[2]" IO_TYPE=LVCMOS33; // Linha 3
+LOCATE COMP "keypad_rows_o[3]" SITE "T3"; IOBUF PORT "keypad_rows_o[3]" IO_TYPE=LVCMOS33; // Linha 4
+
+# Colunas
+LOCATE COMP "keypad_cols_i[0]" SITE "T2"; IOBUF PORT "keypad_cols_i[0]" IO_TYPE=LVCMOS33 PULLMODE=UP; // Coluna 1
+LOCATE COMP "keypad_cols_i[1]" SITE "N4"; IOBUF PORT "keypad_cols_i[1]" IO_TYPE=LVCMOS33 PULLMODE=UP; // Coluna 2
+LOCATE COMP "keypad_cols_i[2]" SITE "M4"; IOBUF PORT "keypad_cols_i[2]" IO_TYPE=LVCMOS33 PULLMODE=UP; // Coluna 3
+LOCATE COMP "keypad_cols_i[3]" SITE "M3"; IOBUF PORT "keypad_cols_i[3]" IO_TYPE=LVCMOS33 PULLMODE=UP; // Coluna 4
+
+LOCATE COMP "gpdi_dp[0]" SITE "G19"; # Blue +
+LOCATE COMP "gpdi_dn[0]" SITE "H20"; # Blue -
+LOCATE COMP "gpdi_dp[1]" SITE "E20"; # Green +
+LOCATE COMP "gpdi_dn[1]" SITE "F19"; # Green -
+LOCATE COMP "gpdi_dp[2]" SITE "C20"; # Red +
+LOCATE COMP "gpdi_dn[2]" SITE "D19"; # Red -
+LOCATE COMP "gpdi_dp[3]" SITE "J19"; # Clock +
+LOCATE COMP "gpdi_dn[3]" SITE "K19"; # Clock -
+IOBUF PORT "gpdi_dp[0]" IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "gpdi_dn[0]" IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "gpdi_dp[1]" IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "gpdi_dn[1]" IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "gpdi_dp[2]" IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "gpdi_dn[2]" IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "gpdi_dp[3]" IO_TYPE=LVCMOS33 DRIVE=4;
+IOBUF PORT "gpdi_dn[3]" IO_TYPE=LVCMOS33 DRIVE=4;
